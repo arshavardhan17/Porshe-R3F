@@ -1,18 +1,23 @@
 import { Environment, OrbitControls, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
+import { Page1 } from "./components/Page1";
+import Pageno2 from "./components/Pageno2";
+import Page3 from "./components/Page3";
 function App() {
   return (
     <div>
-      <div className="bg-white w-full h-10 fixed z-10"> kdld</div>
-      <div className=" bg-black h-screen">
+      <div className=" h-screen w-full fixed top-0">
         <Canvas camera={{ position: [-1.5, 3, 10], fov: 42 }}>
           <ambientLight intensity={1} />
-          <OrbitControls />
+          <OrbitControls enableZoom={false} />
           <Experience />
           <Environment preset="sunset" />
         </Canvas>
       </div>
+      <Page1 />
+      <Pageno2 />
+      <Page3 />
     </div>
   );
 }
