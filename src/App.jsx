@@ -10,7 +10,7 @@ function App() {
       <div className=" h-screen w-full fixed top-0">
         <Canvas camera={{ position: [-1.5, 3, 10], fov: 42 }}>
           <ambientLight intensity={1} />
-          <OrbitControls enableZoom={false} />
+          <OrbitControls enableZoom={false} enableRotate={false} />
           <Experience />
           <Environment preset="sunset" />
         </Canvas>
